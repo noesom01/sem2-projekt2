@@ -10,6 +10,8 @@
 
     <!--Javascript tilføjet-->
     <script src="js/script.js" defer></script>
+
+    <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/17b8add508.js" crossorigin="anonymous"></script>
 
     <!--Fonte-->
@@ -31,18 +33,20 @@
 
     <!--Hovedindhold-->
     <main>
-        <section>
+        <section class="intro">
             <h1>Din indbakke er fuld af fælder - kan du spotte dem?</h1>
 
-            <div>
-                <p>I din hverdag som studerende tikker der hele tiden nye beskeder ind. E-mails, notifikationer og beskeder fra forskellige afsendere er en fast del af din digitale rutine. Nogle er legitime, andre er forsøg på svindel.</p>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>I din hverdag som studerende tikker der hele tiden nye beskeder ind. E-mails, notifikationer og beskeder fra forskellige afsendere er en fast del af din digitale rutine. Nogle er legitime, andre er forsøg på svindel.</p>
 
-                <p>Phishing er et cyberangreb, hvor svindlere udgiver sig for at være en troværdig afsender for at få dig til at klikke på links, åbne filer eller dele personlige oplysninger.</p>
+                    <p>Phishing er et cyberangreb, hvor svindlere udgiver sig for at være en troværdig afsender for at få dig til at klikke på links, åbne filer eller dele personlige oplysninger.</p>
 
-                <p>Når du er vant til at være konstant online og skifte hurtigt mellem undervisere, studieplatforme og sociale medier, kan små advarselstegn let overses. Det er præcis den adfærd, svindlere udnytter.</p>
+                    <p>Når du er vant til at være konstant online og skifte hurtigt mellem undervisere, studieplatforme og sociale medier, kan små advarselstegn let overses. Det er præcis den adfærd, svindlere udnytter.</p>
+                </div>
+
+                <div class="intro-img"><img src="img/img1.png" alt="Ukendt person med hættetrøje sidder ved sin computer omgivet af hængende phishing-ikoner, som bl.a. login, mail, kreditkort m.v."></div>
             </div>
-
-            <div><img src="img/img1.png" alt="Ukendt person med hættetrøje sidder ved sin computer omgivet af hængende phishing-ikoner, som bl.a. login, mail, kreditkort m.v."></div>
         </section>
         
         <!--Scene 1-->
@@ -71,7 +75,7 @@
 
         <!--Valgmulighed 1 - klik på linket for at se karakter-->
         <div class="valgmulighed1">
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark icon error"></i>
 
             <p>Åh nej! Du har klikket på linket. Det er en phishing mail!</p>
             <p>Risiko:</p>
@@ -82,15 +86,58 @@
         </div>
 
         <!--Valgmulighed 1a - fortsættelse af klik på linket for at se karakter-->
-        
+        <div class="valgmulighed1a">
+            <i class="fa-solid fa-exclamation icon warning"></i>
 
-        
+            <p>Du bør handle hurtigt:</p>
+            <p>Afbryd internetforbindelsen</p>
+            <p>Bloker afsender</p>
+            <p>Skift din adgangskode fra en sikker enhed</p>
+            <p>Kontakt IT-support og få din computer renset</p>
+            <P>Budskab: Selv om noget virker vigtigt, bør du altid stoppe op og vurdere, om det er troværdigt, før du klikker.</P>
 
-    
+            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
+        </div>
 
+        <!--Valgmulighed 2 - Undersøg afsender nærmere-->
+        <div class="valgmulighed2">
+            <p>Godt tænkt! Du opdager, at afsenderen ikke matcher hverken din undervisers eller skolens domæne.</p>
+            <p>Du beslutter at slette mailen.</p>
 
+            <button class="btn">Fortsæt</button>
+        </div>
+
+        <!--Valgmulighed 2a - Fortsættelse af undersøg afsender nærmere-->
+        <div class="valgmulighed2a">
+            <i class="fa-solid fa-check icon success"></i>
+
+            <p>Godt valgt! Ved at tjekke afsenderen har du undgået phishing og beskyttet din konto.</p>
+            <p>Budskab: At undersøge afsenderen giver dig bedre kontrol og hjælper med at opdage phishing.</p>
+
+            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
+        </div>
+
+        <!--Valgmulighed 3 - Slet mailen med det samme-->
+        <div class="valgmulighed3">
+            <i class="fa-solid fa-check icon success"></i>
+
+            <p>Godt valgt! Mailen slettes og din konto er sikker.</p>
+            <p>Senere samme dag klikker en af dine medstuderende på linket, og bliver ramt af phishing.</p>
+            <p>Budskab: Når en mail virker mistænkelig, er det sikkert at slette den. Som ekstra sikkerhed kan du blokere afsenderen.</p>
+
+            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
+        </div>
     </main>
 
-    
+    <!--Bundlinje-->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Tænk Før Du Klikker</p>
+            <p>Sølvgade 18, 1307 København K</p>
+            <p>info@tænkførduklikker.dk</p>
+            <p>23 89 01 56</p>
+        </div>
+    </footer>
+
 </body> 
 </html>
