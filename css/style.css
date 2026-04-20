@@ -11,6 +11,30 @@ body {
   margin: 0;
 }
 
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.6em;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 350;
+  font-size: 18px;
+}
+
 header {
   padding: 0.8em 1em;
   position: sticky; /*header sidder fast i toppen, når man scroller*/
@@ -27,19 +51,49 @@ header .logo img {
   display: block;
 }
 
-h1, h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.intro {
+  padding: 1.5em;
+}
+.intro-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
-h1 {
-  font-size: 26px;
-}
-
-h2 {
-  font-size: 24px;
+@media screen and (min-width: 769px) {
+  main {
+    padding: 4em 1.5em;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+  .intro-text {
+    flex: 1;
+    order: 1;
+  }
+  .intro-img {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    order: 2;
+  }
+  .intro-img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 15px;
+  }
+  .scene {
+    max-width: 800px;
+    margin: 2em auto;
+  }
 }/*# sourceMappingURL=style.css.map */
