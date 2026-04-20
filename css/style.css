@@ -33,6 +33,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 350;
   font-size: 18px;
+  text-align: left;
 }
 
 header {
@@ -67,7 +68,7 @@ header .logo img {
 }
 
 .scene {
-  display: block;
+  display: none;
   background-color: #FFFFFF;
   border: 2px solid #000000;
   border-radius: 15px;
@@ -78,9 +79,6 @@ header .logo img {
 }
 .scene.active {
   display: block;
-}
-.scene p {
-  text-align: left;
 }
 .scene .warning-list {
   text-align: left;
@@ -93,6 +91,9 @@ header .logo img {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 350;
+}
+.scene .message strong {
+  font-weight: 700;
 }
 
 .icon {
@@ -130,6 +131,18 @@ header .logo img {
 }
 .btn:hover, .btn:active {
   background-color: #823329;
+}
+
+.footer {
+  background-color: #DED7CE;
+  color: #2C3E50;
+  padding: 20px 20px;
+  width: 100%;
+}
+.footer-content p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 769px) {
