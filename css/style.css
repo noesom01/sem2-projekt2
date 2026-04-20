@@ -66,6 +66,42 @@ header .logo img {
   margin-bottom: 15px;
 }
 
+.scene {
+  display: none;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  padding: 1.5em;
+  margin: 2em auto;
+  max-width: 375px;
+}
+.scene p {
+  text-align: left;
+}
+
+.scene.active {
+  display: block;
+}
+
+.btn {
+  display: block;
+  margin: 1em auto;
+  padding: 0.6em 2em;
+  margin: 1em auto;
+  border: none;
+  border-radius: 15px;
+  background-color: #B4552D;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn:hover, .btn:active {
+  background-color: #823329;
+}
+
 @media screen and (min-width: 769px) {
   main {
     padding: 4em 1.5em;
@@ -95,5 +131,6 @@ header .logo img {
   .scene {
     max-width: 800px;
     margin: 2em auto;
+    padding: 2.5em;
   }
 }/*# sourceMappingURL=style.css.map */
