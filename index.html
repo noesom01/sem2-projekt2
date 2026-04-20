@@ -43,7 +43,7 @@
 
                     <p>Når du er vant til at være konstant online og skifte hurtigt mellem undervisere, studieplatforme og sociale medier, kan små advarselstegn let overses. Det er præcis den adfærd, svindlere udnytter.</p>
                 </div>
-                
+
             </div>
         </section>
         
@@ -62,9 +62,13 @@
         <!--Scene 2-->
         <section class="scene" data-scene="2">
             <p>Du lægger mærke til et par ting, der virker lidt mistænkeligt:</p>
-            <p>Skolens logo mangler</p>
-            <p>Den beder dig klikke på et link for at se din karakter</p>
-            <p>Linket ligner ikke det kommer fra nogle af dine studieplatforme</p>
+
+            <ul class="warning-list">
+                <li>Skolens logo mangler</li>
+                <li>Den beder dig klikke på et link for at se din karakter</li>
+                <li>Linket ligner ikke det kommer fra nogle af dine studieplatforme</li>
+            </ul>
+
             <p>Hvad gør du?</p>
 
             <button class="btn" data-next="3">Klik på linket for at se karakter</button>
@@ -74,25 +78,33 @@
 
         <!--Valg 1 - Tryk på link (Scene 3)-->
         <section class="scene" data-scene="3">
-            <i class="fa-solid fa-xmark icon error"></i>
+            <i class="fa-solid fa-xmark icon icon--scene error"></i>
 
             <p>Åh nej! Du har klikket på linket. Det er en phishing mail!</p>
             <p>Risiko:</p>
-            <p>Dine oplysninger kan være kompromitterede</p>
-            <p>Skadelig software kan være installeret</p>
+
+            <ul class="warning-list">
+                <li>Dine oplysninger kan være kompromitterede</li>
+                <li>Skadelig software kan være installeret</li>
+
+            </ul>
 
             <button class="btn" data-next="4">Hvad nu?</button>
         </section>
 
         <!--Fortsættelse af valg 1 (Scene 4)-->
         <section class="scene" data-scene="4">
-            <i class="fa-solid fa-exclamation icon warning"></i>
+            <i class="fa-solid fa-exclamation icon icon--scene warning"></i>
 
             <p>Du bør handle hurtigt:</p>
-            <p>Afbryd internetforbindelsen</p>
-            <p>Bloker afsender</p>
-            <p>Skift din adgangskode fra en sikker enhed</p>
-            <p>Kontakt IT-support og få din computer renset</p>
+
+            <ul class="warning-list">
+                <li>Afbryd internetforbindelsen</li>
+                <li>Bloker afsender</li>
+                <li>Skift din adgangskode fra en sikker enhed</li>
+                <li>Kontakt IT-support og få din computer renset</li>
+            </ul>
+            
             <P>Budskab: Selv om noget virker vigtigt, bør du altid stoppe op og vurdere, om det er troværdigt, før du klikker.</P>
 
             <button class="btn" data-next="1"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
@@ -108,7 +120,7 @@
 
         <!--Fortsættelse af valg 2 (Scene 6)-->
         <section class="scene" data-scene="6">
-            <i class="fa-solid fa-check icon success"></i>
+            <i class="fa-solid fa-check icon icon--scene success"></i>
 
             <p>Godt valgt! Ved at tjekke afsenderen har du undgået phishing og beskyttet din konto.</p>
             <p>Budskab: At undersøge afsenderen giver dig bedre kontrol og hjælper med at opdage phishing.</p>
@@ -118,7 +130,7 @@
 
         <!--Valg 3 - Slet mailen med det samme (Scene 7)-->
         <section class="scene" data-scene="7">
-            <i class="fa-solid fa-check icon success"></i>
+            <i class="fa-solid fa-check icon icon--scene success"></i>
 
             <p>Godt valgt! Mailen slettes og din konto er sikker.</p>
             <p>Senere samme dag klikker en af dine medstuderende på linket, og bliver ramt af phishing.</p>
