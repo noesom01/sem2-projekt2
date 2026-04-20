@@ -41,36 +41,37 @@
                     <p>Når du er vant til at være konstant online og skifte hurtigt mellem undervisere, studieplatforme og sociale medier, kan små advarselstegn let overses. Det er præcis den adfærd, svindlere udnytter.</p>
                 </div>
 
-                <div class="intro-img"><img src="img/img1.png" alt="Ukendt person med hættetrøje sidder ved sin computer omgivet af hængende phishing-ikoner, som bl.a. login, mail, kreditkort m.v."></div>
+                <div class="intro-img"><img src="img/img1.png" alt="Ukendt person med hættetrøje sidder ved sin computer omgivet af hængende phishing-ikoner"></div>
             </div>
         </section>
         
         <!--Scene 1-->
-        <div class="scene1">
+        
+        <section class="scene active" data-scene="1">
             <h2>Træd ind i scenariet - dine valg afgør udfaldet</h2>
 
             <p>Du modtager en e-mail fra din underviser.</p>
             <p>Emne: “Karakter af seneste aflevering er tilgængelig”</p>
             <p>Du åbner mailen og læser hurtigt indholdet.</p>
 
-            <button class="btn">Start scenarie</button>
-        </div>
+            <button class="btn" data-next="2">Start scenarie</button>
+        </section>
 
         <!--Scene 2-->
-        <div class="scene2">
+        <section class="scene" data-scene="2">
             <p>Du lægger mærke til et par ting, der virker lidt mistænkeligt:</p>
             <p>Skolens logo mangler</p>
             <p>Den beder dig klikke på et link for at se din karakter</p>
             <p>Linket ligner ikke det kommer fra nogle af dine studieplatforme</p>
             <p>Hvad gør du?</p>
 
-            <button class="btn">Klik på linket for at se karakter</button>
-            <button class="btn">Undersøg afsender nærmere</button>
-            <button class="btn">Slet mailen med det samme</button>
-        </div>
+            <button class="btn" data-next="3">Klik på linket for at se karakter</button>
+            <button class="btn" data-next="5">Undersøg afsender nærmere</button>
+            <button class="btn" data-next="7">Slet mailen med det samme</button>
+        </section>
 
-        <!--Valgmulighed 1 - klik på linket for at se karakter-->
-        <div class="valgmulighed1">
+        <!--Valg 1 - Tryk på link (data-scene 3)-->
+        <section class="scene" data-scene="3">
             <i class="fa-solid fa-xmark icon error"></i>
 
             <p>Åh nej! Du har klikket på linket. Det er en phishing mail!</p>
@@ -78,11 +79,11 @@
             <p>Dine oplysninger kan være kompromitterede</p>
             <p>Skadelig software kan være installeret</p>
 
-            <button class="btn">Hvad nu?</button>
-        </div>
+            <button class="btn" data-next="4">Hvad nu?</button>
+        </section>
 
-        <!--Valgmulighed 1a - fortsættelse af klik på linket for at se karakter-->
-        <div class="valgmulighed1a">
+        <!--Fortsættelse af valg 1 (data-scene 4)-->
+        <section class="scene" data-scene="4">
             <i class="fa-solid fa-exclamation icon warning"></i>
 
             <p>Du bør handle hurtigt:</p>
@@ -92,37 +93,37 @@
             <p>Kontakt IT-support og få din computer renset</p>
             <P>Budskab: Selv om noget virker vigtigt, bør du altid stoppe op og vurdere, om det er troværdigt, før du klikker.</P>
 
-            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
-        </div>
+            <button class="btn" data-next="1"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
+        </section>
 
-        <!--Valgmulighed 2 - Undersøg afsender nærmere-->
-        <div class="valgmulighed2">
+        <!--Valg 2 - Undersøg afsender nærmere (data-scene5)-->
+        <section class="scene" data-scene="5">
             <p>Godt tænkt! Du opdager, at afsenderen ikke matcher hverken din undervisers eller skolens domæne.</p>
             <p>Du beslutter at slette mailen.</p>
 
-            <button class="btn">Fortsæt</button>
-        </div>
+            <button class="btn" data-next="6">Fortsæt</button>
+        </section>
 
-        <!--Valgmulighed 2a - Fortsættelse af undersøg afsender nærmere-->
-        <div class="valgmulighed2a">
+        <!--Fortsættelse af valg 2 (datascene 6)-->
+        <section class="scene" data-scene="6">
             <i class="fa-solid fa-check icon success"></i>
 
             <p>Godt valgt! Ved at tjekke afsenderen har du undgået phishing og beskyttet din konto.</p>
             <p>Budskab: At undersøge afsenderen giver dig bedre kontrol og hjælper med at opdage phishing.</p>
 
-            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
-        </div>
+            <button class="btn" data-next="1"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
+        </section>
 
-        <!--Valgmulighed 3 - Slet mailen med det samme-->
-        <div class="valgmulighed3">
+        <!--Valg 3 - Slet mailen med det samme (data-scene 7)-->
+        <section class="scene" data-scene="7">
             <i class="fa-solid fa-check icon success"></i>
 
             <p>Godt valgt! Mailen slettes og din konto er sikker.</p>
             <p>Senere samme dag klikker en af dine medstuderende på linket, og bliver ramt af phishing.</p>
             <p>Budskab: Når en mail virker mistænkelig, er det sikkert at slette den. Som ekstra sikkerhed kan du blokere afsenderen.</p>
 
-            <button class="btn"><i class="fa-solid fa-rotate-left icon restart"></i> Start forfra</button>
-        </div>
+            <button class="btn" data-next="1"><i class="fa-solid fa-rotate-left icon icon--restart"></i> Start forfra</button>
+        </section>
     </main>
 
     <!--Bundlinje-->
