@@ -1,0 +1,68 @@
+//Variables
+$font-heading: "Montserrat", sans-serif;
+$font-body: "Roboto", sans-serif;
+$text-color: #2C3E50;
+
+$bg-primary-color: #FEFCF9;
+$bg-secondary-color: #FFFFFF;
+$bg-tertiary-color: #DED7CE;
+
+$btn-color: #B4552D;
+$btn-hover-color: #823329;
+$btn-text-color: #FFFFFF;
+
+$border-radius: 15px;
+
+
+//Styling
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: $font-body;
+    color: $text-color;
+    background-color: $bg-primary-color;
+    margin: 0;
+}
+
+header{
+    padding: 0.8em 1em;
+    position: sticky; /*header sidder fast i toppen, når man scroller*/
+    top: 0;
+    background-color: $bg-primary-color;
+
+    .logo{
+        display: flex;
+        align-items:center;
+
+        img{
+        max-height: 50px;
+        width: auto;
+        display: block;
+        }
+    }
+
+}
+
+h1, h2{
+    font-family: $font-heading;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 26px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+p{
+
+}
