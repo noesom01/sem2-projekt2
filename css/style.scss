@@ -1,6 +1,7 @@
 //Variables
 $font-primary: "Montserrat", sans-serif;
 $font-secondary: "Roboto", sans-serif;
+
 $text-color: #2C3E50;
 
 $bg-primary-color: #FEFCF9;
@@ -11,11 +12,60 @@ $btn-color: #B4552D;
 $btn-hover-color: #823329;
 $btn-text-color: #FFFFFF;
 
+$line-height: 1.6em;
+
 $border-radius: 15px;
+$border-color: #000000;
 
 $icon-warning: #2C3E50;
 $icon-error: #BF0000;
 $icon-success: #6FB146;
+
+$space-xs: 0.25em;
+$space-small: 0.5em;
+$space-medium: 1em;
+$space-medium-large: 1.5em;
+$space-large: 2em;
+$space-xl: 2.5em;
+
+$breakpoint-desktop: 769px;
+
+
+//Mixins
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style($bg-color: $btn-color, $color: $btn-text-color, $hover: $btn-hover-color, $btn-padding: 0.6em $space-large){
+    display: block;
+    margin: $space-medium auto;
+    padding: $btn-padding;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    color: $color;
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover, &:active{
+        background-color: $hover;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: $breakpoint-desktop) {@content;}
+}
 
 
 //Base Styling
@@ -28,7 +78,6 @@ body{
     font-family: $font-secondary;
     color: $text-color;
     background-color: $bg-primary-color;
-    margin: 0;
 }
 
 h1, h2{
@@ -48,7 +97,7 @@ h2{
 }
 
 p{
-    line-height: 1.6em;
+    line-height: $line-height;
     margin-bottom: 30px;
     font-family: $font-secondary;
     font-weight: 350;
@@ -59,32 +108,30 @@ p{
 
 //Header
 header{
-    padding: 0.8em 1em;
+    padding: 0.8em $space-medium;
     position: sticky; /*header sidder fast i toppen, når man scroller*/
     top: 0;
     background-color: $bg-primary-color;
+}
 
-    .logo{
-        display: flex;
-        align-items:center;
+.logo{
+    @include flex-align-center;
 
-        img{
-        max-height: 50px;
-        width: auto;
-        display: block;
-        }
+    img{
+    max-height: 50px;
+    width: auto;
+    display: block;
     }
-
 }
 
 //Intro
 .intro{
-    padding: 1.5em;
+    padding: $space-medium-large;
 
     &-content{
         display: flex;
         flex-direction: column;
-        gap: 1.5em;
+        gap: $space-medium-large;
     }
 
     &-img img{
@@ -99,47 +146,46 @@ header{
 .scene{
     display: none; //skjuler alle scener som default
     background-color: $bg-secondary-color;
-    border: 2px solid #000000;
+    border: 2px solid $border-color;
     border-radius: $border-radius;
-    padding: 1.5em;
-    margin: 2em auto;
+    padding: $space-medium-large;
+    margin: $space-large auto;
     max-width: 375px;
     text-align: center;
 
     &.active{
         display: block; //Viser scene 1
     }
-
-    .warning-list{
-        text-align: left;
-        margin: 0 0 30px 0;
-        padding-left: 1.2em;
-
-        li{
-            margin-bottom: 0.5em;
-            line-height: 1.6em;
-            font-family: $font-secondary;
-            font-size: 18px;
-            font-weight: 350;
-        }
-    }
-
-    .message{
-
-        strong{
-            font-weight: 700;
-        }
-    }
-
 }
 
+.warning-list{
+    text-align: left;
+    margin: 0 0 30px 0;
+    padding-left: 1.2em;
 
+    li{
+        margin-bottom: $space-xs;
+        line-height: $line-height;
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 350;
+    }
+}
+
+.message{
+
+    strong{
+    font-weight: 700;
+    }
+}
+
+//Ikoner i scener
 .icon{
-    line-height: 1;
+    line-height: $line-height;
 
     &--scene{
         display: block;
-        margin: 0 auto 1em auto;
+        margin: 0 auto $space-small auto;
         font-size: 40px;
 
         &.error{
@@ -158,87 +204,59 @@ header{
 
 //Knapper
 .btn{
-    display: block;
-    margin: 1em auto;
-    padding: 0.6em 2em;
-    border: none;
-    border-radius: $border-radius;
-    background-color: $btn-color;
-    color: $btn-text-color;
-    font-family: $font-primary;
-    font-weight: 600;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-
-    &:hover, &:active{
-        background-color: $btn-hover-color;
-    } 
-    
+    @include button-style;
 }
 
 //Bundlinje
 .footer{
     background-color: $bg-tertiary-color;
     color: $text-color;
-    padding: 20px 20px;
+    padding: 20px;
     width: 100%;
+}
 
-    &-content{
-        p{
-            margin-bottom: 10px;
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-
+.footer-content{
+    p{
+        margin-bottom: $space-small;
+        font-weight: 500;
+        line-height: $line-height;
     }
 }
 
-
-//media query til Desktop version
-@media screen and (min-width: 769px){
-
+//Responsive - Desktop version
+@include desktop{
     main{
-        padding: 4em 1.5em;
+        padding: 4em $space-medium-large;
     }
 
-    //Intro
+    .intro-content{
+        flex-direction: row;
+        align-items: center;
+        gap: $space-large;
+    }
 
-    .intro{
-        &-content{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 2em;
-        }
+    .intro-text{
+        flex: 1;
+        order: 1;
+    }
 
-        &-text{
-            flex: 1;
-            order: 1;
-        }
+    .intro-img{
+        @include flex-center;
+        flex: 1;
+        order: 2;
 
-        &-img{
-            display: flex;
-            justify-content: center;
-            flex: 1;
-            order: 2;
-
-            img{
-                width: 100%;
-                height: auto;
-                max-width: 500px;
-                border-radius: $border-radius;
+        img{
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            border-radius: $border-radius;
             }
-        }
-    }
-
-    //Scener
-
-    .scene{
-        max-width: 800px;
-        margin: 2em auto;
-        padding: 2.5em;
     }
     
+    .scene{
+        max-width: 800px;
+        margin: $space-large auto;
+        padding: $space-xl;
+    }
+
 }
