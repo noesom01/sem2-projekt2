@@ -12,20 +12,17 @@ $btn-color: #B4552D;
 $btn-hover-color: #823329;
 $btn-text-color: #FFFFFF;
 
-$line-height: 1.6em;
-
-$border-radius: 15px;
-
 $icon-warning: #2C3E50;
 $icon-error: #BF0000;
 $icon-success: #6FB146;
 
-$space-xs: 0.25em;
-$space-small: 0.5em;
-$space-medium: 1em;
-$space-medium-large: 1.5em;
-$space-large: 2em;
-$space-xl: 2.5em;
+$line-height: 1.6em;
+
+$border-radius: 15px;
+
+$space-1: 0.5em;
+$space-2: 1.5em;
+$space-3: 2em;
 
 $breakpoint-desktop: 769px;
 
@@ -43,9 +40,9 @@ $breakpoint-desktop: 769px;
     align-items: center;
 }
 
-@mixin button-style($bg-color: $btn-color, $color: $btn-text-color, $hover: $btn-hover-color, $btn-padding: 0.6em $space-large){
+@mixin button-style($bg-color: $btn-color, $color: $btn-text-color, $hover: $btn-hover-color, $btn-padding: 0.6em $space-3){
     display: block;
-    margin: $space-medium auto;
+    margin: 1em auto;
     padding: $btn-padding;
     border: none;
     border-radius: $border-radius;

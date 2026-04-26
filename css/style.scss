@@ -41,14 +41,14 @@ body{
 
 //Header
 header{
-    padding: 0.8em partial.$space-medium;
+    padding: 0.8em partial.$space-2;
     position: sticky; /*header sidder fast i toppen, når man scroller*/
     top: 0;
     background-color: partial.$bg-primary-color;
 }
 
 .logo{
-    @include flex-align-center;
+    @include partial.flex-align-center;
 
         img{
             max-height: 50px;
@@ -59,18 +59,18 @@ header{
 
 //Intro
 .intro{
-    padding: partial.$space-medium-large;
+    padding: partial.$space-2;
 
         &-content{
             display: flex;
             flex-direction: column;
-            gap: partial.$space-medium-large;
+            gap: partial.$space-2;
         }
 
         &-img img{
             width: 100%;
             height: auto;
-            border-radius: $border-radius;
+            border-radius: partial.$border-radius;
             margin-bottom: 15px;
         }
 }
@@ -81,8 +81,8 @@ header{
     background-color: partial.$bg-secondary-color;
     border: 2px solid #000000;
     border-radius: partial.$border-radius;
-    padding: partial.$space-medium-large;
-    margin: partial.$space-large auto;
+    padding: partial.$space-2;
+    margin: partial.$space-3 auto;
     max-width: 375px;
     text-align: center;
 
@@ -97,7 +97,7 @@ header{
     padding-left: 1.2em;
 
         li{
-            margin-bottom: partial.$space-xs;
+            margin-bottom: partial.$space-1;
             line-height: partial.$line-height;
             font-family: partial.$font-secondary;
             font-size: 18px;
@@ -118,7 +118,7 @@ header{
 
         &--scene{
             display: block;
-            margin: 0 auto partial.$space-small auto;
+            margin: 0 auto partial.$space-1 auto;
             font-size: 40px;
 
             &.error{
@@ -137,7 +137,7 @@ header{
 
 //Knapper
 .btn{
-    @include button-style;
+    @include partial.button-style;
 }
 
 //Bundlinje
@@ -150,22 +150,22 @@ header{
 
 .footer-content{
     p{
-        margin-bottom: partial.$space-small;
+        margin-bottom: partial.$space-1;
         font-weight: 500;
         line-height: partial.$line-height;
     }
 }
 
 //Responsive - Desktop version
-@include desktop{
+@include partial.desktop{
     main{
-        padding: 4em partial.$space-medium-large;
+        padding: 4em partial.$space-2;
     }
 
     .intro-content{
         flex-direction: row;
         align-items: center;
-        gap: partial.$space-large;
+        gap: partial.$space-3;
     }
 
     .intro-text{
@@ -174,7 +174,7 @@ header{
     }
 
     .intro-img{
-        @include flex-center;
+        @include partial.flex-center;
         flex: 1;
         order: 2;
 
@@ -188,8 +188,8 @@ header{
     
     .scene{
         max-width: 800px;
-        margin: partial.$space-large auto;
-        padding: partial.$space-xl;
+        margin: partial.$space-3 auto;
+        padding: 2.5em;
     }
 
 }
