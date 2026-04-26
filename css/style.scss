@@ -122,27 +122,24 @@ header{
 }
 
 //Ikoner i scener
-.icon{
-    line-height: partial.$line-height;
+.icon--scene{
+    display: block;
+    margin: 0 auto partial.$space-1 auto;
+    font-size: 40px;
 
-        &--scene{
-            display: block;
-            margin: 0 auto partial.$space-1 auto;
-            font-size: 40px;
+        &.error{
+            color: partial.$icon-error;
+        }
 
-            &.error{
-                color: partial.$icon-error;
-            }
+        &.warning{
+            color: partial.$icon-warning;
+        }
 
-            &.warning{
-                color: partial.$icon-warning;
-            }
-
-            &.success{
-                color: partial.$icon-success;
-            }
+        &.success{
+            color: partial.$icon-success;
         }
 }
+
 
 //Knapper
 .btn{

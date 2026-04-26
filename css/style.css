@@ -101,9 +101,6 @@ header {
   font-weight: 700;
 }
 
-.icon {
-  line-height: 1.6em;
-}
 .icon--scene {
   display: block;
   margin: 0 auto 0.5em auto;
