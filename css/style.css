@@ -12,19 +12,18 @@ body {
 body h1, body h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   text-align: center;
 }
 body h1 {
-  font-size: 26px;
+  font-size: 24px;
 }
 body h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 body p {
   line-height: 1.6em;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 350;
   font-size: 18px;
@@ -64,7 +63,7 @@ header {
 }
 
 .scene {
-  display: none;
+  display: block;
   background-color: #FFFFFF;
   border: 2px solid #000000;
   border-radius: 15px;
@@ -74,6 +73,15 @@ header {
   text-align: center;
 }
 .scene.active {
+  display: block;
+}
+.scene-img {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+.scene-img img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -173,5 +181,14 @@ header {
     max-width: 800px;
     margin: 2em auto;
     padding: 2.5em;
+  }
+  .scene-img {
+    display: flex;
+    justify-content: center;
+  }
+  .scene-img img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
