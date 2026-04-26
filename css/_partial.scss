@@ -1,0 +1,67 @@
+//Variables
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+$text-color: #2C3E50;
+
+$bg-primary-color: #FEFCF9;
+$bg-secondary-color: #FFFFFF;
+$bg-tertiary-color: #DED7CE;
+
+$btn-color: #B4552D;
+$btn-hover-color: #823329;
+$btn-text-color: #FFFFFF;
+
+$line-height: 1.6em;
+
+$border-radius: 15px;
+
+$icon-warning: #2C3E50;
+$icon-error: #BF0000;
+$icon-success: #6FB146;
+
+$space-xs: 0.25em;
+$space-small: 0.5em;
+$space-medium: 1em;
+$space-medium-large: 1.5em;
+$space-large: 2em;
+$space-xl: 2.5em;
+
+$breakpoint-desktop: 769px;
+
+
+//Mixins
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style($bg-color: $btn-color, $color: $btn-text-color, $hover: $btn-hover-color, $btn-padding: 0.6em $space-large){
+    display: block;
+    margin: $space-medium auto;
+    padding: $btn-padding;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $bg-color;
+    color: $color;
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover, &:active{
+        background-color: $hover;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: $breakpoint-desktop) {@content;}
+}
