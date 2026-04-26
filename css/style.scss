@@ -76,7 +76,7 @@ header{
 
 //Scener
 .scene{
-    display: block; //skjuler alle scener som default
+    display: none; //skjuler alle scener som default
     background-color: partial.$bg-secondary-color;
     border: 2px solid #000000;
     border-radius: partial.$border-radius;
