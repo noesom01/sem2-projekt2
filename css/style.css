@@ -200,6 +200,7 @@ header {
     height: auto;
   }
   .reference-list {
-    max-width: 900px;
+    max-width: 800px;
+    padding: 1.5em;
   }
 }/*# sourceMappingURL=style.css.map */
