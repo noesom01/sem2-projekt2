@@ -8,23 +8,22 @@ body {
   font-family: "Roboto", sans-serif;
   color: #2C3E50;
   background-color: #FEFCF9;
+  line-height: 1.6em;
 }
-body h1, body h2 {
+body h1, body h2, body h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   margin-bottom: 25px;
-  text-align: center;
-}
-body h1 {
-  font-size: 24px;
-}
-body h2 {
   font-size: 22px;
 }
+body h1, body h2 {
+  text-align: center;
+}
+body h3 {
+  text-align: left;
+}
 body p {
-  line-height: 1.6em;
   margin-bottom: 15px;
-  font-family: "Roboto", sans-serif;
   font-weight: 350;
   font-size: 18px;
   text-align: left;
@@ -91,8 +90,6 @@ header {
 }
 .warning-list li {
   margin-bottom: 0.5em;
-  line-height: 1.6em;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 350;
 }
@@ -114,6 +111,22 @@ header {
 }
 .icon--scene.success {
   color: #6FB146;
+}
+
+.reference-list {
+  padding: 1.5em;
+}
+.reference-list .references {
+  list-style: disc;
+}
+.reference-list .references li {
+  font-size: 18px;
+  font-weight: 350;
+  margin-bottom: 1.5em;
+  word-wrap: break-word;
+}
+.reference-list .references em {
+  font-style: italic;
 }
 
 .btn {
@@ -144,7 +157,6 @@ header {
 .footer-content p {
   margin-bottom: 0.5em;
   font-weight: 500;
-  line-height: 1.6em;
 }
 
 @media screen and (min-width: 769px) {
@@ -186,5 +198,8 @@ header {
     max-width: 450px;
     width: 100%;
     height: auto;
+  }
+  .reference-list {
+    max-width: 900px;
   }
 }/*# sourceMappingURL=style.css.map */

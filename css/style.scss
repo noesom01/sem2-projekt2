@@ -10,26 +10,25 @@ body{
     font-family: partial.$font-secondary;
     color: partial.$text-color;
     background-color: partial.$bg-primary-color;
+    line-height: partial.$line-height;
 
-        h1, h2{
+        h1, h2, h3{
             font-family: partial.$font-primary;
             font-weight: 600;
             margin-bottom: 25px;
-            text-align: center;
-        }
-
-        h1{
-            font-size: 24px;
-        }
-
-        h2{
             font-size: 22px;
         }
 
+        h1, h2{
+            text-align: center;
+        }
+
+        h3{
+            text-align: left;
+        }
+
         p{
-            line-height: partial.$line-height;
             margin-bottom: 15px;
-            font-family: partial.$font-secondary;
             font-weight: 350;
             font-size: 18px;
             text-align: left;
@@ -107,8 +106,6 @@ header{
 
         li{
             margin-bottom: partial.$space-1;
-            line-height: partial.$line-height;
-            font-family: partial.$font-secondary;
             font-size: 18px;
             font-weight: 350;
         }
@@ -140,6 +137,27 @@ header{
         }
 }
 
+//Kildeangivelse
+
+.reference-list{
+    padding: partial.$space-2;
+
+    .references{
+        list-style: disc;
+
+        li{
+            font-size: 18px;
+            font-weight: 350;
+            margin-bottom: partial.$space-2;
+            word-wrap: break-word; //Links brydes til næste linje, hvis de er for lange
+        }
+
+        em{
+            font-style: italic;
+        }
+
+    }
+}
 
 //Knapper
 .btn{
@@ -158,7 +176,6 @@ header{
     p{
         margin-bottom: partial.$space-1;
         font-weight: 500;
-        line-height: partial.$line-height;
     }
 }
 
@@ -208,5 +225,12 @@ header{
             }
         }
     }
+
+    .reference-list{
+        max-width: 900px;
+
+
+    }
+
 
 }
