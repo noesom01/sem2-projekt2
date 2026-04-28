@@ -1,16 +1,18 @@
-const scenes = document.querySelectorAll(".scene") /*scenes er en variabel, erklæret af const (værdi uændret), der finder alle elementer med class scene, og gemmer dem i en Nodelist.*/
-const btns = document.querySelectorAll(".btn") /*btns er en variabel, erklæret af const (værdi uændret), der finder alle elementer med class btn.*/
+const scenes = document.querySelectorAll(".scene") /*scenes = variabel, der via DOM querySelectorAll finder alle elementer med class "scene", og gemmer dem i en Nodelist.*/
 
-const hideAllScenes = () => { /*Arrow funktion, der går igennem alle scener og fjerner "active"*/
+const btns = document.querySelectorAll(".btn") /*btns = variabel, der via DOM querySelectorAll finder alle elementer med class "btn", og gemmer dem i en Nodelist (bruges til event listeners)*/
+
+
+const hideAllScenes = () => { /*Arrow funktion. Skjuler alle scener ved at fjerne class "active"*/
     scenes.forEach(scene => scene.classList.remove("active"));
 }
 
-const showScene = (sceneId) => { /*Arrow funktion, der finder én specifik scene via Id og tilføjer "active"*/
-    hideAllScenes ();
+const showScene = (sceneId) => { /*Arrow funktion. Viser én scene baseret på Id*/
+    hideAllScenes (); 
     document.getElementById(sceneId).classList.add("active");
 }
 
-const nextScene = (e) => {
+const nextScene = (e) => { /**/
     const btn = e.currentTarget; 
     const text = btn.textContent.trim();
 
