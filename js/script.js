@@ -1,56 +1,56 @@
-const btns = document.querySelectorAll('.btn'); /*Variabel, der finder alle elementer med klassen btn*/
+const scenes = document.querySelectorAll(".scene") /*scenes er en variabel, erklæret af const (værdi uændret), der finder alle elementer med class scene, og gemmer dem i en Nodelist.*/
+const btns = document.querySelectorAll(".btn") /*btns er en variabel, erklæret af const (værdi uændret), der finder alle elementer med class btn.*/
 
-const scenes = document.querySelectorAll(".scene"); /*Variabel, der finder alle elementer med klassen scene. Herfra bruge index numre til at fortælle hvilken scene, der skal vises*/
+const hideAllScenes = () => { /*Arrow funktion, der går igennem alle scener og fjerner "active"*/
+    scenes.forEach(scene => scene.classList.remove("active"));
+}
+
+const showScene = (sceneId) => { /*Arrow funktion, der finder én specifik scene via Id og tilføjer "active"*/
+    hideAllScenes ();
+    document.getElementById(sceneId).classList.add("active");
+}
 
 const nextScene = (e) => {
-    console.log(e.target.textContent); /*Logger teksten på den knap, der blev klikket på*/
+    const btn = e.currentTarget; 
+    const text = btn.textContent.trim();
 
-    switch(e.target.textContent) {
-        case "Start scenarie":
-            console.log("Start was clicked"); /*Logger at start knappen blev klikket på*/
-            scenes[0].classList.remove("active");
-            scenes[1].classList.add("active");
+    switch (true) {
+
+        case text.includes("Start scenarie"):
+            showScene("scene-choice");
         break;
 
-        case "Klik på linket for at se karakter":
-            scenes[1].classList.remove("active");
-            scenes[2].classList.add("active");
+        case text.includes ("Klik på linket"):
+            showScene("click-link1");
         break;
 
-        case "Hvad nu?":
-            scenes[2].classList.remove("active");
-            scenes[5].classList.add("active");
+        case text.includes("Hvad nu"):
+            showScene("click-link2");
         break;
 
-        case "Undersøg afsender nærmere":
-            scenes[1].classList.remove("active");
-            scenes[3].classList.add("active");
+        case text.includes("Undersøg afsender"):
+            showScene("check-sender1");
         break;
 
-        case "Fortsæt":
-            scenes[3].classList.remove("active");
-            scenes[6].classList.add("active");
+        case text.includes("Fortsæt"):
+            showScene("check-sender2");
         break;
 
-        case "Slet mailen med det samme":
-            scenes[1].classList.remove("active");
-            scenes[4].classList.add("active");
+        case text.includes("Slet mailen"):
+            showScene("delete-mail");
         break;
 
-        case "Start forfra":
-            scenes[4].classList.remove("active");
-            scenes[5].classList.remove("active");
-            scenes[6].classList.remove("active");
-            scenes[0].classList.add("active");
+        case text.includes("Start forfra"):
+            showScene("scene-start");
         break;
 
-        default: console.log("No matching case found"); /*Logger hvis ingen af cases matcher den klikkede knaps tekst*/
-
+        default:
+            console.log("Ingen match:", text); 
 
     }
 }
 
-
-for(const btn of btns){
-    btn.addEventListener("click", nextScene); /*Tilføjer eventlistener til alle knapper, der lytter efter et klik og kalder funktionen nextScene*/
-}
+//Event Listeners
+btns.forEach(btn => {
+    btn.addEventListener("click", nextScene);
+})

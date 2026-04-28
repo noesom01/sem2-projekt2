@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*Variables*/
+/*Mixins*/
+/*Partial fil hentes ind i style.scss som et modul.*/
+/*Base Styling*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,6 +33,7 @@ body p {
   text-align: left;
 }
 
+/*Header*/
 header {
   padding: 0.8em 1.5em;
   position: sticky; /*header sidder fast i toppen, når man scroller*/
@@ -46,6 +51,7 @@ header {
   display: block;
 }
 
+/*Intro*/
 .intro {
   padding: 1.5em;
 }
@@ -61,8 +67,9 @@ header {
   margin-bottom: 15px;
 }
 
+/*Scener*/
 .scene {
-  display: none;
+  display: none; /*skjuler alle scener som default*/
   background-color: #FFFFFF;
   border: 2px solid #000000;
   border-radius: 15px;
@@ -72,7 +79,7 @@ header {
   text-align: center;
 }
 .scene.active {
-  display: block;
+  display: block; /*Viser aktive scene*/
 }
 .scene-img {
   margin-bottom: 1.5em;
@@ -98,6 +105,7 @@ header {
   font-weight: 700;
 }
 
+/*Ikoner i scener*/
 .icon--scene {
   display: block;
   margin: 0 auto 0.5em auto;
@@ -113,6 +121,7 @@ header {
   color: #6FB146;
 }
 
+/*Kildeangivelse*/
 .reference-list {
   padding: 1.5em;
 }
@@ -123,12 +132,13 @@ header {
   font-size: 18px;
   font-weight: 350;
   margin-bottom: 1.5em;
-  word-wrap: break-word;
+  word-wrap: break-word; /*Links brydes til næste linje, hvis de er for lange*/
 }
 .reference-list .references em {
   font-style: italic;
 }
 
+/*Knapper*/
 .btn {
   display: block;
   margin: 1em auto;
@@ -147,6 +157,7 @@ header {
   background-color: #823329;
 }
 
+/*Bundlinje*/
 .footer {
   background-color: #DED7CE;
   color: #2C3E50;
@@ -159,6 +170,7 @@ header {
   font-weight: 500;
 }
 
+/*Responsive - Desktop version*/
 @media screen and (min-width: 769px) {
   main {
     padding: 4em 1.5em;

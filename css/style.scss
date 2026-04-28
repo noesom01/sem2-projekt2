@@ -1,6 +1,6 @@
-@use './partial'; //Partial fil hentes ind i style.scss som et modul.
+@use './partial'; /*Partial fil hentes ind i style.scss som et modul.*/
 
-//Base Styling
+/*Base Styling*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -35,7 +35,7 @@ body{
         }
 }
 
-//Header
+/*Header*/
 header{
     padding: 0.8em partial.$space-2;
     position: sticky; /*header sidder fast i toppen, når man scroller*/
@@ -53,7 +53,7 @@ header{
         }
 }
 
-//Intro
+/*Intro*/
 .intro{
     padding: partial.$space-2;
 
@@ -71,9 +71,9 @@ header{
         }
 }
 
-//Scener
+/*Scener*/
 .scene{
-    display: none; //skjuler alle scener som default
+    display: none; /*skjuler alle scener som default*/
     background-color: partial.$bg-secondary-color;
     border: 2px solid #000000;
     border-radius: partial.$border-radius;
@@ -83,7 +83,7 @@ header{
     text-align: center;
 
         &.active{
-            display: block; //Viser aktive scene
+            display: block; /*Viser aktive scene*/
         }
 
         &-img{
@@ -116,7 +116,7 @@ header{
     }
 }
 
-//Ikoner i scener
+/*Ikoner i scener*/
 .icon--scene{
     display: block;
     margin: 0 auto partial.$space-1 auto;
@@ -135,7 +135,7 @@ header{
         }
 }
 
-//Kildeangivelse
+/*Kildeangivelse*/
 
 .reference-list{
     padding: partial.$space-2;
@@ -147,7 +147,7 @@ header{
             font-size: 18px;
             font-weight: 350;
             margin-bottom: partial.$space-2;
-            word-wrap: break-word; //Links brydes til næste linje, hvis de er for lange
+            word-wrap: break-word; /*Links brydes til næste linje, hvis de er for lange*/
         }
 
         em{
@@ -157,12 +157,12 @@ header{
     }
 }
 
-//Knapper
+/*Knapper*/
 .btn{
     @include partial.button-style;
 }
 
-//Bundlinje
+/*Bundlinje*/
 .footer{
     background-color: partial.$bg-tertiary-color;
     color: partial.$text-color;
@@ -177,7 +177,7 @@ header{
     }
 }
 
-//Responsive - Desktop version
+/*Responsive - Desktop version*/
 @include partial.desktop{
     main{
         padding: 4em partial.$space-2;

@@ -1,4 +1,4 @@
-//Variables
+/*Variables*/
 $font-primary: "Montserrat", sans-serif;
 $font-secondary: "Roboto", sans-serif;
 
@@ -27,7 +27,7 @@ $space-3: 2em;
 $breakpoint-desktop: 769px;
 
 
-//Mixins
+/*Mixins*/
 
 @mixin flex-align-center{
     display: flex;
