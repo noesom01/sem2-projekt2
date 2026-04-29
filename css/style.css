@@ -137,6 +137,9 @@ header {
 .reference-list .references em {
   font-style: italic;
 }
+.reference-list .references a {
+  color: #B4552D;
+}
 
 /*Knapper*/
 .btn {

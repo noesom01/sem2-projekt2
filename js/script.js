@@ -9,7 +9,7 @@ const hideAllScenes = () => { /*Arrow funktion. Skjuler alle scener ved at fjern
 
 const showScene = (sceneId) => { /*Arrow funktion. Viser én scene baseret på Id*/
     hideAllScenes (); 
-    document.getElementById(sceneId).classList.add("active");
+    document.querySelector(sceneId).classList.add("active");
 }
 
 const nextScene = (e) => { /**/
@@ -19,31 +19,31 @@ const nextScene = (e) => { /**/
     switch (true) {
 
         case text.includes("Start scenarie"):
-            showScene("scene-choice");
+            showScene("#scene-choice");
         break;
 
         case text.includes ("Klik på linket"):
-            showScene("click-link1");
+            showScene("#click-link1");
         break;
 
         case text.includes("Hvad nu"):
-            showScene("click-link2");
+            showScene("#click-link2");
         break;
 
         case text.includes("Undersøg afsender"):
-            showScene("check-sender1");
+            showScene("#check-sender1");
         break;
 
         case text.includes("Fortsæt"):
-            showScene("check-sender2");
+            showScene("#check-sender2");
         break;
 
         case text.includes("Slet mailen"):
-            showScene("delete-mail");
+            showScene("#delete-mail");
         break;
 
         case text.includes("Start forfra"):
-            showScene("scene-start");
+            showScene("#scene-start");
         break;
 
         default:
