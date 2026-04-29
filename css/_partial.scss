@@ -34,12 +34,6 @@ $breakpoint-desktop: 769px;
     align-items: center;
 }
 
-@mixin flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @mixin button-style($bg-color: $btn-color, $color: $btn-text-color, $hover: $btn-hover-color, $btn-padding: 0.6em $space-3){
     display: block;
     margin: 1em auto;
@@ -53,10 +47,6 @@ $breakpoint-desktop: 769px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-
-    &:hover, &:active{
-        background-color: $hover;
-    }
 }
 
 @mixin desktop{
