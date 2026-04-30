@@ -3,29 +3,32 @@ const scenes = document.querySelectorAll(".scene"); /*scenes = variabel, der via
 const btns = document.querySelectorAll(".btn"); /*btns = variabel, der via DOM querySelectorAll finder alle elementer med class "btn", og gemmer dem i en NodeList (bruges til event listeners)*/
 
 
-const hideAllScenes = () => {
-    scenes.forEach(scene => scene.classList.remove("active"));
+
+const hideAllScenes = () => { //Arrow funktion, der skjuler alle scener
+    scenes.forEach(scene => scene.classList.remove("active")); //Gennemgår alle scener i NodeList og fjerner "active", så de ikke vises
 }
 
-const showScene = (sceneId) => {
-    hideAllScenes();
+const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene baseret på Id
+    hideAllScenes(); //Sikrer at alle andre scener skjules først 
 
-    const scene = document.querySelector(sceneId);
+    const scene = document.querySelector(sceneId); //Finder det specifikke scene-element i DOM
 
-    if (scene) {
-        scene.classList.add("active");
+    if (scene) { //Hvis scenen findes
+        scene.classList.add("active"); //Tilføjer "active" så scenen bliver synlig
+        
     }
-    else{
-        console.log("Scene findes ikke", sceneId);
+    else{ //Hvis scenen ikke findes
+        console.log("Scene findes ikke", sceneId); //Logger fejl i konsolen 
     }
 }
 
-//Event handler
-const nextScene = (e) => {
-    const text = e.currentTarget.textContent.trim().toLowerCase();
 
-    switch (text) {
-        case "start scenarie":
+const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og styrer sceneskift via switch-case baseret på knaptekst
+    const text = e.currentTarget.textContent.trim().toLowerCase(); //Henter knaptekst, 
+
+    switch (text) { //Vælger scene baseret på knaptekst
+
+        case "start scenarie": //Hvis knappen med teksten "start scenarie" klikkes, vises scenen med id "scene-choice"
             showScene ("#scene-choice");
         break;
 
@@ -54,11 +57,11 @@ const nextScene = (e) => {
         break;
 
         default:
-            console.log("Ingen match", text);
+            console.log("Ingen match", text); //Logger hvis knaptekst ikke matcher nogen defineret case 
     }
 }
 
-//Event listeners
-btns.forEach(btn => {
-    btn.addEventListener("click", nextScene);
+
+btns.forEach(btn => { //Gennemgår alle knapper i NodeList og tilføjer en event listener til hver
+    btn.addEventListener("click", nextScene); //Tilføjer click-event listener, som kalder nextScene
 })
