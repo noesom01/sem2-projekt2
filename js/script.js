@@ -3,11 +3,12 @@ const scenes = document.querySelectorAll(".scene"); /*scenes = variabel, der via
 const btns = document.querySelectorAll(".btn"); /*btns = variabel, der via DOM querySelectorAll finder alle elementer med class "btn", og gemmer dem i en NodeList (bruges til event listeners)*/
 
 
-
+//Skjul scener
 const hideAllScenes = () => { //Arrow funktion, der skjuler alle scener
     scenes.forEach(scene => scene.classList.remove("active")); //Gennemgår alle scener i NodeList og fjerner "active", så de ikke vises
 }
 
+//Vis én specifik scene
 const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene baseret på Id
     hideAllScenes(); //Sikrer at alle andre scener skjules først 
 
@@ -22,7 +23,7 @@ const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene 
     }
 }
 
-
+//Event Handler
 const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og styrer sceneskift via switch-case baseret på knaptekst
     const text = e.currentTarget.textContent.trim().toLowerCase(); //Henter knaptekst, 
 
@@ -61,7 +62,7 @@ const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og 
     }
 }
 
-
+//Event Listener
 btns.forEach(btn => { //Gennemgår alle knapper i NodeList og tilføjer en event listener til hver
     btn.addEventListener("click", nextScene); //Tilføjer click-event listener, som kalder nextScene
 })
