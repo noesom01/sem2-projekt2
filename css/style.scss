@@ -130,6 +130,15 @@ header{
         }
 }
 
+/*Knapper*/
+.btn{
+    @include partial.button-style;
+
+        &:hover, &:active{
+            background-color: partial.$hover;
+        }
+}
+
 /*Kildeangivelse*/
 
 .reference-list{
@@ -156,14 +165,6 @@ header{
     }
 }
 
-/*Knapper*/
-.btn{
-    @include partial.button-style;
-
-        &:hover, &:active{
-            background-color: partial.$hover;
-        }
-}
 
 /*Bundlinje*/
 .footer{
