@@ -47,6 +47,10 @@ $breakpoint-desktop: 769px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+
+        &:hover, &:active{
+            background-color: $hover;
+        }
 }
 
 @mixin desktop{

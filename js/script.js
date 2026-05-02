@@ -16,6 +16,8 @@ const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene 
 
     if (scene) { //Hvis scenen findes
         scene.classList.add("active"); //Tilføjer "active" så scenen bliver synlig
+
+        scene.scrollIntoView({behavior: "smooth", block: "start"}); //Scroller brugeren til toppen af den aktive scene ved sceneskift 
         
     }
     else{ //Hvis scenen ikke findes
@@ -25,7 +27,7 @@ const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene 
 
 //Event Handler
 const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og styrer sceneskift via switch-case baseret på knaptekst
-    const text = e.currentTarget.textContent.trim().toLowerCase(); //Henter knaptekst, 
+    const text = e.currentTarget.textContent.trim().toLowerCase(); //Sikrer robust matching ved at standardisere knaptekst før sceneskift udføres 
 
     switch (text) { //Vælger scene baseret på knaptekst
 
@@ -34,7 +36,7 @@ const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og 
         break;
 
         case "klik på linket for at se karakter":
-            showScene ("#click-link1")
+            showScene ("#click-link1");
         break;
 
         case "hvad nu?":
@@ -42,11 +44,11 @@ const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og 
         break;
 
         case "undersøg afsender nærmere":
-            showScene("#check-sender1")
+            showScene("#check-sender1");
         break;
 
         case "fortsæt":
-            showScene("#check-sender2")
+            showScene("#check-sender2");
         break;
 
         case "slet mailen med det samme":
@@ -54,7 +56,7 @@ const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og 
         break;
 
         case "start forfra":
-            showScene("#scene-start")
+            showScene("#scene-start");
         break;
 
         default:
