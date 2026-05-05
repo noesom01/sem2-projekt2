@@ -27,7 +27,7 @@ const showScene = (sceneId) => { //Arrow funktion, der viser én specifik scene 
 
 //Event Handler
 const nextScene = (e) => { //Arrow funktion, der modtager click-eventet (e), og styrer sceneskift via switch-case baseret på knaptekst
-    const text = e.currentTarget.textContent.trim().toLowerCase(); //Sikrer robust matching ved at standardisere knaptekst før sceneskift udføres 
+    const text = e.currentTarget.textContent.trim().toLowerCase(); //Sikrer matching ved at standardisere knaptekst før sceneskift udføres 
 
     switch (text) { //Vælger scene baseret på knaptekst
 
