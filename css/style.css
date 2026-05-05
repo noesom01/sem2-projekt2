@@ -25,7 +25,7 @@ body h1, body h2 {
 }
 body p {
   margin-bottom: 15px;
-  font-weight: 350;
+  font-weight: 300;
   font-size: 18px;
   text-align: left;
 }
@@ -98,7 +98,7 @@ header {
 .scene .warning-list li {
   margin-bottom: 0.5em;
   font-size: 18px;
-  font-weight: 350;
+  font-weight: 300;
 }
 .scene .message strong {
   font-weight: 700;
@@ -148,7 +148,7 @@ header {
 }
 .reference-list .references li {
   font-size: 18px;
-  font-weight: 350;
+  font-weight: 300;
   margin-bottom: 1.5em;
   word-wrap: break-word; /*Links brydes til næste linje, hvis de er for lange*/
 }
