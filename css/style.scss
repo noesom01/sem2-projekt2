@@ -175,8 +175,8 @@ header{
         }
 }
 
-/*Responsive - Desktop version*/
-@include partial.desktop{
+/*Media Query til desktop version*/
+@media screen and (min-width: partial.$breakpoint-desktop){
     main{
         padding: 4em partial.$space-2;
     }
@@ -225,6 +225,4 @@ header{
         max-width: 800px;
         padding: partial.$space-2;
     }
-
-
 }

@@ -52,7 +52,3 @@ $breakpoint-desktop: 769px;
             background-color: $hover;
         }
 }
-
-@mixin desktop{
-    @media screen and (min-width: $breakpoint-desktop) {@content;}
-}
