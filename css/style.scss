@@ -1,9 +1,9 @@
-@use './partial'; /*Partial fil hentes ind i style.scss som et modul.*/
+@use './partial'; /*Partial fil hentes ind i style.scss som et modul. Den indeholder en samling af variabler og mixins, som kan genbruges.*/
 
 /*Base Styling*/
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; /*fjerner default margin*/
 }
 
 body{
@@ -20,7 +20,7 @@ body{
         }
 
         h1, h2{
-            text-align: center;
+            text-align: center; /*Centrerer H1 og H2 overskrifter*/
         }
 
         p{
@@ -31,23 +31,23 @@ body{
         }
 
         a{
-            color: partial.$btn-color;
+            color: partial.$btn-color; /*Klikbare links får samme farve som knapper*/
         }
 }
 
 /*Header*/
 header{
-    padding: 0.8em partial.$space-2;
+    padding: 0.8em partial.$space-2; /*Indvendig afstand i header*/
     position: sticky; /*header sidder fast i toppen, når man scroller*/
-    top: 0;
+    top: 0; /*headeren placeres øverst*/
     background-color: partial.$bg-primary-color;
 }
 
 .logo{
-    @include partial.flex-align-center;
+    @include partial.flex-align-center; /*Mixin er kaldt til flex og centrering vertikalt*/
 
         img{
-            max-height: 50px;
+            max-height: 50px; /*Maks højde på logo*/
             width: auto;
             display: block;
         }
@@ -60,7 +60,7 @@ header{
         &-content{
             display: flex;
             flex-direction: column;
-            gap: partial.$space-2;
+            gap: partial.$space-2; /*Afstand mellem elementer*/
         }
 
         &-img img{
@@ -71,7 +71,7 @@ header{
         }
 }
 
-/*Scener*/
+/*Scener i scenariet*/
 .scene{
     display: none; /*skjuler alle scener som default*/
     background-color: partial.$bg-secondary-color;
@@ -79,9 +79,9 @@ header{
     border-radius: partial.$border-radius;
     padding: partial.$space-2;
     margin: partial.$space-3 auto;
-    max-width: 375px;
+    max-width: 375px; /*Maks bredde, så der stadig er lidt luft i siderne på mobil skærmstørrelse*/
     text-align: center;
-    scroll-margin-top: 80px; /*Kompencerer for sticky header, så scrollIntoView i JS ikke placerer scenen skjult bag header*/
+    scroll-margin-top: 80px; /*Kompencerer for sticky header, så scrollIntoView i JS ikke placerer scenen bag header*/
 
         &.active{
             display: block; /*Viser aktive scene*/
@@ -109,7 +109,7 @@ header{
                 }
         }
 
-        .message strong{
+        .message strong{ 
             font-weight: 600;
         }
 
@@ -118,8 +118,8 @@ header{
 
 /*Ikoner i scener*/
 .icon--scene{
-    display: block;
-    margin: 0 auto partial.$space-1 auto;
+    display: block; /*Gøt ikon til blok*/ 
+    margin: 0 auto partial.$space-1 auto; /*Centrer ikon*/
     font-size: 40px;
 
         &.error{
@@ -137,7 +137,7 @@ header{
 
 /*Knapper*/
 .btn{
-    @include partial.button-style;
+    @include partial.button-style; /*Mixin er kaldt til styling af knap*/
 }
 
 /*Kildeangivelse*/
@@ -146,7 +146,7 @@ header{
     padding: partial.$space-2;
 
     .references{
-        list-style: disc;
+        list-style: disc; /*punktopstilling*/
 
             li{
                 font-size: 18px;
@@ -156,7 +156,7 @@ header{
             }
 
             em{
-                font-style: italic;
+                font-style: italic; /*kursiv tekst ved kildens titel*/
             }
     }
 }
@@ -188,15 +188,15 @@ header{
     }
 
     .intro-text{
-        flex: 1;
-        order: 1;
+        flex: 1; /*Fylder halvdelen af pladsen*/
+        order: 1; /*Vises til venstre*/
     }
 
     .intro-img{
-        @include partial.flex-align-center;
-        justify-content: center;
-        flex: 1;
-        order: 2;
+        @include partial.flex-align-center; /*Mixin er kaldt til flex og centrering af elementer vertikalt*/
+        justify-content: center; /*Centrer horisontalt*/
+        flex: 1; /*Fylder den anden halvdel*/
+        order: 2; /*Vises til højre*/
 
         img{
             width: 100%;
@@ -208,12 +208,12 @@ header{
     
     .scene{
         max-width: 800px;
-        margin: partial.$space-3 auto;
+        margin: partial.$space-3 auto; /*Centrer scenen*/
         padding: 2.5em;
 
         &-img{
             display: flex;
-            justify-content: center;
+            justify-content: center; /*Centrer mail billede i scenen horisontalt*/
 
                 img{
                     max-width: 450px;

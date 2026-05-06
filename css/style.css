@@ -1,11 +1,11 @@
 @charset "UTF-8";
-/*Variables*/
+/*Variabler*/
 /*Mixins*/
-/*Partial fil hentes ind i style.scss som et modul.*/
+/*Partial fil hentes ind i style.scss som et modul. Den indeholder en samling af variabler og mixins, som kan genbruges.*/
 /*Base Styling*/
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0; /*fjerner default margin*/
 }
 
 body {
@@ -21,7 +21,7 @@ body h1, body h2, body h3 {
   font-size: 22px;
 }
 body h1, body h2 {
-  text-align: center;
+  text-align: center; /*Centrerer H1 og H2 overskrifter*/
 }
 body p {
   margin-bottom: 15px;
@@ -30,23 +30,24 @@ body p {
   text-align: left;
 }
 body a {
-  color: #B4552D;
+  color: #B4552D; /*Klikbare links får samme farve som knapper*/
 }
 
 /*Header*/
 header {
-  padding: 0.8em 1.5em;
+  padding: 0.8em 1.5em; /*Indvendig afstand i header*/
   position: sticky; /*header sidder fast i toppen, når man scroller*/
-  top: 0;
+  top: 0; /*headeren placeres øverst*/
   background-color: #FEFCF9;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  /*Mixin er kaldt til flex og centrering vertikalt*/
 }
 .logo img {
-  max-height: 50px;
+  max-height: 50px; /*Maks højde på logo*/
   width: auto;
   display: block;
 }
@@ -58,7 +59,7 @@ header {
 .intro-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.5em; /*Afstand mellem elementer*/
 }
 .intro-img img {
   width: 100%;
@@ -67,7 +68,7 @@ header {
   margin-bottom: 15px;
 }
 
-/*Scener*/
+/*Scener i scenariet*/
 .scene {
   display: none; /*skjuler alle scener som default*/
   background-color: #FFFFFF;
@@ -75,9 +76,9 @@ header {
   border-radius: 15px;
   padding: 1.5em;
   margin: 2em auto;
-  max-width: 375px;
+  max-width: 375px; /*Maks bredde, så der stadig er lidt luft i siderne på mobil skærmstørrelse*/
   text-align: center;
-  scroll-margin-top: 80px; /*Kompencerer for sticky header, så scrollIntoView i JS ikke placerer scenen skjult bag header*/
+  scroll-margin-top: 80px; /*Kompencerer for sticky header, så scrollIntoView i JS ikke placerer scenen bag header*/
 }
 .scene.active {
   display: block; /*Viser aktive scene*/
@@ -106,8 +107,8 @@ header {
 
 /*Ikoner i scener*/
 .icon--scene {
-  display: block;
-  margin: 0 auto 0.5em auto;
+  display: block; /*Gøt ikon til blok*/
+  margin: 0 auto 0.5em auto; /*Centrer ikon*/
   font-size: 40px;
 }
 .icon--scene.error {
@@ -138,13 +139,16 @@ header {
 .btn:hover, .btn:active {
   background-color: #823329;
 }
+.btn {
+  /*Mixin er kaldt til styling af knap*/
+}
 
 /*Kildeangivelse*/
 .reference-list {
   padding: 1.5em;
 }
 .reference-list .references {
-  list-style: disc;
+  list-style: disc; /*punktopstilling*/
 }
 .reference-list .references li {
   font-size: 18px;
@@ -153,7 +157,7 @@ header {
   word-wrap: break-word; /*Links brydes til næste linje, hvis de er for lange*/
 }
 .reference-list .references em {
-  font-style: italic;
+  font-style: italic; /*kursiv tekst ved kildens titel*/
 }
 
 /*Bundlinje*/
@@ -179,15 +183,16 @@ header {
     gap: 2em;
   }
   .intro-text {
-    flex: 1;
-    order: 1;
+    flex: 1; /*Fylder halvdelen af pladsen*/
+    order: 1; /*Vises til venstre*/
   }
   .intro-img {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex: 1;
-    order: 2;
+    /*Mixin er kaldt til flex og centrering af elementer vertikalt*/
+    justify-content: center; /*Centrer horisontalt*/
+    flex: 1; /*Fylder den anden halvdel*/
+    order: 2; /*Vises til højre*/
   }
   .intro-img img {
     width: 100%;
@@ -197,12 +202,12 @@ header {
   }
   .scene {
     max-width: 800px;
-    margin: 2em auto;
+    margin: 2em auto; /*Centrer scenen*/
     padding: 2.5em;
   }
   .scene-img {
     display: flex;
-    justify-content: center;
+    justify-content: center; /*Centrer mail billede i scenen horisontalt*/
   }
   .scene-img img {
     max-width: 450px;
